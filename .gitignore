@@ -1,0 +1,19 @@
+# Installed dependencies
+node_modules/
+
+# TypeScript build output (tsconfig.json outDir)
+dist/
+
+# Local secrets and environment settings
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

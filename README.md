@@ -22,4 +22,6 @@ This pipeline provides an easy way to detect and report broken links before they
 ### Installation
 
 Install the dependencies
-```npm install```
+```bash
+npm install
+```

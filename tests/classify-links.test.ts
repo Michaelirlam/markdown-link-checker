@@ -3,8 +3,6 @@ import { File, Link } from "../src/types/types.js"
 import path from "path"
 import { classifyLink, classifyLinks } from "../src/resolution/classify-links.js";
 
-
-
 const mockFile: File = {
     fullPath: path.resolve("src/docs/subject/index.md"),
     relativePath: "index.md",

@@ -13,7 +13,7 @@ export type Link = {
   rawLink: string;
   normalisedLink: string;
   line: number;
-  linkType: "internal" | "external" | "anchor" | "unknown";
+  linkType: "internal" | "external" | "anchor" | "mailto" | "tel" | "unknown";
   resolvedPath?: string; // internal links only
   resolvedFile?: File | null; // internal links only
   exists?: boolean;

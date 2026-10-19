@@ -1,4 +1,4 @@
-import { Link } from "../types/types";
+import { Link } from "../types/types.js";
 
 export function classifyLink(link: Link): Link {
   const { normalisedLink } = link;

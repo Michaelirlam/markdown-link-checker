@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises";
-import { Link, File } from "../types/types";
+import { Link, File } from "../types/types.js";
 
 
 function extractLinksFromLine(line: string, lineNumber: number, file: File): Link[] {

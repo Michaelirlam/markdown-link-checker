@@ -1,4 +1,4 @@
-import { Link } from "../types/types";
+import { Link } from "../types/types.js";
 
 export function validateInternalOrAnchorLink(link: Link): Link {
   if (link.linkType === "anchor") {

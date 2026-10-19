@@ -1,4 +1,4 @@
-import { Link } from "../types/types";
+import { Link } from "../types/types.js";
 
 export function invalidInternalLinks(links: Link[]): Link[] {
   return links.filter(link => link.linkType === "internal" && link.validationStatus === "invalid");

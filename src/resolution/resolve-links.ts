@@ -1,6 +1,6 @@
 import { existsSync, statSync } from "node:fs";
 import path from "path";
-import { File, Link } from "../types/types";
+import { File, Link } from "../types/types.js";
 
 export function resolveLink(link: Link, allFiles: File[], root: string, extensions: string[]): Link {
   if (link.linkType !== "internal") return link;

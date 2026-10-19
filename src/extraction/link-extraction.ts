@@ -2,13 +2,12 @@ import { readFile } from "node:fs/promises";
 import { Link, File } from "../types/types.js";
 
 
-function extractLinksFromLine(line: string, lineNumber: number, file: File): Link[] {
-  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+export function extractLinksFromLine(line: string, lineNumber: number, file: File): Link[] {
+  const linkRegex = /(?<!!)\[([^\]]+)\]\(([^)]+)\)/g;
   const links: Link[] = [];
 
   for (const match of line.matchAll(linkRegex)) {
     const [rawLink, _, normalisedLink] = match;
-    if (rawLink.startsWith("![")) continue;
 
     links.push({
       file,
@@ -22,7 +21,7 @@ function extractLinksFromLine(line: string, lineNumber: number, file: File): Lin
   return links;
 }
 
-async function extractLinksFromFile(file: File): Promise<Link[]> {
+export async function extractLinksFromFile(file: File): Promise<Link[]> {
   const content = await readFile(file.fullPath, "utf8");
   const lines = content.split("\n");
 
